@@ -1,10 +1,19 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+
 </head>
 <body>
-$END$
+
+    <h1>List {{ list.id }}</h1>
+    <p>Status: {{ list.status }}</p>
+    <p>Describe: {{ list.describe }}</p>
+    <p>To-Do Date: {{ list.date_of_completion }}</p>
+
+
 </body>
 </html>
