@@ -14,7 +14,7 @@ def list_view(request):
 
 def to_do_list(request):
     if request.method == 'GET':
-        return render(request, 'to_do_list.html',{'status':status_choices})
+        return render(request, 'to_do_list.html', {'status': status_choices})
     elif request.method == "POST":
         describe = request.POST.get("describe")
         status = request.POST.get('status')

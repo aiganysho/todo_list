@@ -1,0 +1,20 @@
+[
+{
+  "model": "webapp.list",
+  "pk": 1,
+  "fields": {
+    "describe": "book",
+    "status": "new",
+    "date_of_completion": "2020-10-10"
+  }
+},
+{
+  "model": "webapp.list",
+  "pk": 2,
+  "fields": {
+    "describe": "to run",
+    "status": "in_progress",
+    "date_of_completion": "2021-02-02"
+  }
+}
+]
