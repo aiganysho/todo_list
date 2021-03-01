@@ -1,20 +1,11 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="{% static "css/style.css" %}">
-
-</head>
-<body>
+{% extends "base.html" %}
+{% block menu %}<li><a href="{% url "list-add" %}">Create To-Do list</a></li>{% endblock menu %}
+{% block page_header %} To-do list{{ list.id }}{% endblock page_header %}
+{% block content %}
 
     <h1>List {{ list.id }}</h1>
     <p>Status: {{ list.status }}</p>
     <p>Describe: {{ list.describe }}</p>
     <p>To-Do Date: {{ list.date_of_completion }}</p>
 
-<a href=" "> Home </a>
-
-</body>
-</html>
+{% endblock content %}

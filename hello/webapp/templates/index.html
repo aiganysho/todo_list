@@ -1,25 +1,19 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="{% static "css/style.css" %}">
-</head>
-<body>
 
-<h1>To-Do list</h1>
-{% if not lists %}
-    <h2>No To-Do List</h2>
-{% endif %}
+{% extends 'base.html' %}
+{% block menu %}<li><a href="{% url "list-add" %}">To-Do list</a></li>{% endblock menu %}
+{% block page_header %}Task list{% endblock page_header %}
+{% block content %}
+    {% if not lists %}
+        <h2>No To-Do List</h2>
+    {% endif %}
 
-{% for list in lists %}
-     <a href="/list?id={{ list.id }}">{{ list.describe}}</a>
-    <br/>
+    {% for list in lists %}
+         <a href="{% url "list-view" list.pk %}">{{ list.describe}}</a>
+        <br/>
 
-{% endfor %}
-    <br/>
+    {% endfor %}
+        <br/>
 
-<a href="/lists/add"> Create To-Do list</a>
-</body>
-</html>
+{#<a href="/lists/add"> Create To-Do list</a>#}
+    <a href="{% url "list-add" %}"> Create To-Do<a/>
+{% endblock content %}

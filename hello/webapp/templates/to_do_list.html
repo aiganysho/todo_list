@@ -1,29 +1,21 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="{% static "css/style.css" %}">
-</head>
-<body>
-<h1>Create To-Do list</h1>
-<form action="/lists/add/" method="post">
-    {% csrf_token %}
-    <label>Status:</label><br/>
-    <select name="status">
-        {% for i,j in status %}
-            <option value="{{ i }}">{{ j }}</option><br/>
-        {% endfor %}
-    </select>
-    <br/>
-    <label>Describe:</label><br/>
-    <textarea name="describe"></textarea><br/>
-    <label>Date of completion:</label><br/>
-    <input type="text" name="date of complection"/><br/>
-    <br/>
-    <input type="submit" value="Send"/>
+{% extends 'base.html' %}
+{% block page_header %}Create To-Do list{% endblock page_header %}
+{% block content %}
 
-    <a href=" "> Home </a>
-</body>
-</html>
+    <form action="/lists/add/" method="post">
+        {% csrf_token %}
+        <label>Status:</label><br/>
+        <select name="status">
+            {% for i,j in status %}
+                <option value="{{ i }}">{{ j }}</option><br/>
+            {% endfor %}
+        </select>
+        <br/>
+        <label>Describe:</label><br/>
+        <textarea name="describe"></textarea><br/>
+        <label>Date of completion:</label><br/>
+        <input type="text" name="date of complection"/><br/>
+        <br/>
+        <input type="submit" value="Send"/>
+
+{% endblock content %}
