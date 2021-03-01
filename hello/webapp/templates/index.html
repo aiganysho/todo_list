@@ -1,6 +1,6 @@
 
 {% extends 'base.html' %}
-{% block menu %}<li><a href="{% url "list-add" %}">To-Do list</a></li>{% endblock menu %}
+{% block menu %}<li><a href="{% url "list-add" %}">Create To-Do list</a></li>{% endblock menu %}
 {% block page_header %}Task list{% endblock page_header %}
 {% block content %}
     {% if not lists %}
@@ -14,6 +14,5 @@
     {% endfor %}
         <br/>
 
-{#<a href="/lists/add"> Create To-Do list</a>#}
     <a href="{% url "list-add" %}"> Create To-Do<a/>
 {% endblock content %}
