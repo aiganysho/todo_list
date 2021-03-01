@@ -20,11 +20,13 @@ def to_do_list(request):
         describe = request.POST.get("describe")
         status = request.POST.get('status')
         date_of_completion = request.POST.get('date of complection')
+        description = request.POST.get('Description')
 
         list = List.objects.create(
             describe=describe,
             status=status,
-            date_of_completion=date_of_completion
+            date_of_completion=date_of_completion,
+            description=description
 
         )
 

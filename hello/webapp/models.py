@@ -4,7 +4,8 @@ status_choices = [('new', 'Новая'), ('in_progress', 'В процессе'),
 # Create your models here.
 
 class List(models.Model):
-    describe = models.TextField(max_length=500, null=False, blank=False)
+    describe = models.TextField(max_length=150, null=False, blank=False)
+    description = models.TextField(max_length=500, null=True, blank=True)
     status = models.CharField(max_length=150, null=False, blank=False, choices=status_choices, default='new')
     date_of_completion = models.DateField(null=True, blank=True, default=' ')
     class Meta:

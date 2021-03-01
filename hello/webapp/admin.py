@@ -4,11 +4,11 @@ from webapp.models import List
 
 # class ListAdmin(admin.ModelAdmin):
 class ListAdmin(admin.ModelAdmin):
-    list_display = ['id', 'status', 'describe', 'date_of_completion']
+    list_display = ['id', 'status', 'describe', 'description', 'date_of_completion']
     list_filter = ['describe']
-    search_fields = ['status', 'describe']
-    fields = ['id', 'status', 'describe', 'date_of_completion']
-    readonly_fields = ['date_of_completion', 'id']
+    search_fields = ['status', 'describe', 'description']
+    fields = ['id', 'status', 'describe', 'date_of_completion', 'description']
+    readonly_fields = ['id']
 
 
 admin.site.register(List, ListAdmin)

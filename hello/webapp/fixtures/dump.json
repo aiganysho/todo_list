@@ -4,6 +4,7 @@
   "pk": 1,
   "fields": {
     "describe": "book",
+    "description": null,
     "status": "new",
     "date_of_completion": "2020-10-10"
   }
@@ -13,6 +14,7 @@
   "pk": 2,
   "fields": {
     "describe": "to run",
+    "description": null,
     "status": "in_progress",
     "date_of_completion": "2021-02-02"
   }
@@ -22,6 +24,7 @@
   "pk": 3,
   "fields": {
     "describe": "to buy telephone",
+    "description": null,
     "status": "done",
     "date_of_completion": "2021-02-02"
   }
@@ -31,6 +34,7 @@
   "pk": 4,
   "fields": {
     "describe": "table tennis",
+    "description": null,
     "status": "in_progress",
     "date_of_completion": "2021-02-26"
   }
@@ -40,8 +44,39 @@
   "pk": 5,
   "fields": {
     "describe": "jihd",
+    "description": null,
     "status": "new",
     "date_of_completion": "2020-10-10"
+  }
+},
+{
+  "model": "webapp.list",
+  "pk": 6,
+  "fields": {
+    "describe": "to read book ",
+    "description": null,
+    "status": "new",
+    "date_of_completion": "2020-10-10"
+  }
+},
+{
+  "model": "webapp.list",
+  "pk": 7,
+  "fields": {
+    "describe": "book",
+    "description": null,
+    "status": "new",
+    "date_of_completion": "2020-10-10"
+  }
+},
+{
+  "model": "webapp.list",
+  "pk": 8,
+  "fields": {
+    "describe": "water",
+    "description": "to drink water 3,5 l",
+    "status": "done",
+    "date_of_completion": "2021-03-01"
   }
 },
 {
@@ -49,7 +84,7 @@
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$216000$48dcE8JZAIDr$m9Zim5ZSAUAiaCtUWK9MHBp3d9Xc74MAEYfba9ohOEs=",
-    "last_login": null,
+    "last_login": "2021-03-01T09:48:17.915Z",
     "is_superuser": true,
     "username": "admin",
     "first_name": "",
