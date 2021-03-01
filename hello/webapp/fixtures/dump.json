@@ -80,6 +80,36 @@
   }
 },
 {
+  "model": "webapp.list",
+  "pk": 9,
+  "fields": {
+    "describe": "paraplan",
+    "description": null,
+    "status": "done",
+    "date_of_completion": "2021-02-02"
+  }
+},
+{
+  "model": "webapp.list",
+  "pk": 10,
+  "fields": {
+    "describe": "",
+    "description": null,
+    "status": "new",
+    "date_of_completion": null
+  }
+},
+{
+  "model": "webapp.list",
+  "pk": 11,
+  "fields": {
+    "describe": "",
+    "description": null,
+    "status": "new",
+    "date_of_completion": null
+  }
+},
+{
   "model": "auth.user",
   "pk": 1,
   "fields": {

@@ -4,10 +4,9 @@
 {% block content %}
 
     <h1>List {{ list.id }}</h1>
-    <p>Status: {{ list.status }}</p>
+    <p>Status: {{ list.get_status_display }}</p>
     <p>Describe: {{ list.describe }}</p>
     <p>Detailed Description: {{ list.description }}</p>
     <p>To-Do Date: {{ list.date_of_completion }}</p>
-
 
 {% endblock content %}

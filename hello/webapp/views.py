@@ -19,8 +19,17 @@ def to_do_list(request):
     elif request.method == "POST":
         describe = request.POST.get("describe")
         status = request.POST.get('status')
-        date_of_completion = request.POST.get('date of complection')
-        description = request.POST.get('Description')
+        date_of_completion = request.POST.get('date_of_complection')
+        description = request.POST.get('description')
+
+        if not description:
+            description=None
+        if not date_of_completion:
+            date_of_completion=None
+        if not describe:
+            describe=None
+        if not status:
+            status=None
 
         list = List.objects.create(
             describe=describe,
