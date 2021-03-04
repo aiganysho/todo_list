@@ -1,21 +1,11 @@
 [
 {
   "model": "webapp.list",
-  "pk": 1,
-  "fields": {
-    "describe": "book",
-    "description": null,
-    "status": "new",
-    "date_of_completion": "2020-10-10"
-  }
-},
-{
-  "model": "webapp.list",
   "pk": 2,
   "fields": {
     "describe": "to run",
-    "description": null,
-    "status": "in_progress",
+    "description": "",
+    "status": "done",
     "date_of_completion": "2021-02-02"
   }
 },
@@ -24,7 +14,7 @@
   "pk": 3,
   "fields": {
     "describe": "to buy telephone",
-    "description": null,
+    "description": "",
     "status": "done",
     "date_of_completion": "2021-02-02"
   }
@@ -37,16 +27,6 @@
     "description": null,
     "status": "in_progress",
     "date_of_completion": "2021-02-26"
-  }
-},
-{
-  "model": "webapp.list",
-  "pk": 5,
-  "fields": {
-    "describe": "jihd",
-    "description": null,
-    "status": "new",
-    "date_of_completion": "2020-10-10"
   }
 },
 {
@@ -87,26 +67,6 @@
     "description": null,
     "status": "done",
     "date_of_completion": "2021-02-02"
-  }
-},
-{
-  "model": "webapp.list",
-  "pk": 10,
-  "fields": {
-    "describe": "",
-    "description": null,
-    "status": "new",
-    "date_of_completion": null
-  }
-},
-{
-  "model": "webapp.list",
-  "pk": 11,
-  "fields": {
-    "describe": "",
-    "description": null,
-    "status": "new",
-    "date_of_completion": null
   }
 },
 {
