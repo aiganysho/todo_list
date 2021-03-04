@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 
 from webapp.models import List, status_choices
-from webapp.form import ListForm
+from webapp.form import ListForm, ListDeleteForm
 # Create your views here.
 
 def index_view(request):
@@ -77,3 +77,21 @@ def list_update_view(request, pk):
             list.save()
             return redirect('list-view', pk=list.id)
         return render(request, 'list_update.html', context={'form': form, 'list': list})
+
+def list_delete_view(request, pk):
+
+    list = get_object_or_404(List, id=pk)
+
+    if request.method == 'GET':
+        form = ListDeleteForm()
+        return render(request, 'list_delete.html', context={'list': list, 'form': form})
+    elif request.method == 'POST':
+        form = ListDeleteForm(data=request.POST)
+        if form.is_valid():
+            if form.cleaned_data['describe'] != list.describe:
+                form.errors['describe'] = ["name of task don't match"]
+                return render(request, 'list_delete.html', context={'list': list, 'form': form})
+
+            list.delete()
+            return redirect('list-lists')
+        return render(request, 'list_delete.html', context={'list': list, 'form': form})
