@@ -20,7 +20,7 @@ from webapp.views import (
     list_view,
     to_do_list,
     list_update_view,
-    list_delete_view
+    # list_delete_view
 )
 
 
@@ -31,6 +31,6 @@ urlpatterns = [
     path('', index_view, name='list-lists'),
     path('<int:pk>/', list_view, name='list-view'),
     path('lists/add/', to_do_list, name='list-add'),
-    path('<int:pk>/update', list_update_view, name='article-update'),
-    path('<int:pk>/delete', list_delete_view, name='article-delete')
+    path('<int:pk>/update', list_update_view, name='list-update'),
+    # path('<int:pk>/delete', list_delete_view, name='list-delete')
 ]
