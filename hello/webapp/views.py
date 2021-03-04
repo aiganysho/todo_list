@@ -23,13 +23,13 @@ def to_do_list(request):
         description = request.POST.get('description')
 
         if not description:
-            description=None
+            description = None
         if not date_of_completion:
-            date_of_completion=None
+            date_of_completion = None
         if not describe:
-            describe=None
+            describe = None
         if not status:
-            status=None
+            status = None
 
         list = List.objects.create(
             describe=describe,
@@ -40,3 +40,5 @@ def to_do_list(request):
         )
 
         return redirect('list-view', pk=list.id)
+
+def list_update_view(request, pk):
