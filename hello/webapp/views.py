@@ -81,17 +81,8 @@ def list_update_view(request, pk):
 def list_delete_view(request, pk):
 
     list = get_object_or_404(List, id=pk)
-
-    if request.method == 'GET':
-        form = ListDeleteForm()
-        return render(request, 'list_delete.html', context={'list': list, 'form': form})
+    if request.method == "GET":
+        return render(request, 'list_delete.html', context={'list': list})
     elif request.method == 'POST':
-        form = ListDeleteForm(data=request.POST)
-        if form.is_valid():
-            if form.cleaned_data['describe'] != list.describe:
-                form.errors['describe'] = ["name of task don't match"]
-                return render(request, 'list_delete.html', context={'list': list, 'form': form})
-
-            list.delete()
-            return redirect('list-lists')
-        return render(request, 'list_delete.html', context={'list': list, 'form': form})
+        list.delete()
+        return redirect('list-lists')

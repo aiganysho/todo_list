@@ -5,7 +5,11 @@
 
 {% block content%}
     <form action="{% url "list-delete" list.id %}", method="POST">
-        {% include 'form.html' with button_text="Yes, I want to delete the task" %}
+        {% csrf_token %}
+        <input type="submit" value='yes'>
+        </br>
+         </br>
         <a href="{% url "list-view" list.id %}">Cancellation!</a>
     </form>
 {% endblock content %}
+
