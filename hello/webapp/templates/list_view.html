@@ -1,5 +1,8 @@
 {% extends "base.html" %}
-{% block menu %}<li><a href="{% url "list-add" %}">Create To-Do list</a></li>{% endblock menu %}
+{% block menu %}
+    <li><a href="{% url "list-add" %}">Create To-Do list</a></li>
+    <li><a href="{% url "list-update" list.id %}">Редактировать статью</a></li>
+{% endblock menu %}
 {% block page_header %}Description of To-Do list: {{ list.id }}{% endblock page_header %}
 {% block content %}
 
