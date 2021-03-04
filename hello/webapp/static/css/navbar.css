@@ -1,0 +1,32 @@
+.navbar {
+    display: block;
+    background: lightseagreen;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    font-size: 0;
+    box-sizing: border-box;
+    padding: 7px 30px;
+}
+.menu {
+    font-size: 17px;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    color: #fffee8;
+}
+.menu li {
+    display: inline-block;
+}
+.menu a {
+    display: inline-block;
+    text-decoration: none;
+    color: darkslategrey;
+    padding: 5px 15px;
+}
+.menu a:hover {
+    color: #ffc122;
+    text-decoration: underline;
+}

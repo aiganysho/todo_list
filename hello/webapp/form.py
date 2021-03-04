@@ -8,5 +8,5 @@ class ListForm(forms.ModelForm):
         model = List
         fields = ('describe', 'description', 'status', 'date_of_completion')
 
-# class ListDeleteForm(forms.Form):
-#     describe = forms.TimeField(max_length=150, required=True, label='Enter of the task, to delete! ')
+class ListDeleteForm(forms.Form):
+    describe = forms.TimeField(required=True, label='Enter of the task, to delete! ')
