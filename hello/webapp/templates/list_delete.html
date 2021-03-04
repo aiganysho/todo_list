@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Confirm the deletion of the task{% endblock %}
+{% block page_header %}Are you sure you want to delete the task "{{ list.describe }}"?{% endblock page_header %}
+
+{% block content%}
+    <form action="{% url "list-delete" list.id %}", method="POST">
+        {% include 'form.html' with button_text="Yes, I want to delete the task" %}
+        <a href="{% url "list-view" list.id %}">Cancellation!</a>
+    </form>
+{% endblock content %}

@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 {% block menu %}
-    <li><a href="{% url "list-add" %}">Create To-Do list</a></li>
-    <li><a href="{% url "list-update" list.id %}">Редактировать статью</a></li>
+    <li><a href="{% url "list-add" %}">Create Task</a></li>
+    <li><a href="{% url "list-update" list.id %}">Edit Task</a></li>
+    <li><a href="{% url "list-delete" list.id %}">Delete Task</a></li>
 {% endblock menu %}
-{% block page_header %}Description of To-Do list: {{ list.id }}{% endblock page_header %}
+{% block page_header %}Description of Task: {{ list.id }}{% endblock page_header %}
 {% block content %}
 
     <h1>List {{ list.id }}</h1>

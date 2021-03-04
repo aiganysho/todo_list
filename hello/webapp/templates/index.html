@@ -8,11 +8,7 @@
     {% endif %}
 
     {% for list in lists %}
-         <a href="{% url "list-view" list.pk %}">{{ list.describe}}</a>
+         <a href="{% url "list-view" list.pk %}">{{ list.id }}. {{ list.describe}}</a>
         <br/>
-
     {% endfor %}
-        <br/>
-
-    <a href="{% url "list-add" %}"> Create To-Do<a/>
 {% endblock content %}

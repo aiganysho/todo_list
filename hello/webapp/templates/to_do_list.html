@@ -1,24 +1,9 @@
 {% extends 'base.html' %}
-{% block page_header %}Create To-Do list{% endblock page_header %}
+
+{% block page_header %}Create Task{% endblock page_header %}
+
 {% block content %}
-
-    <form action="/lists/add/" method="post">
-        {% csrf_token %}
-        <label>Status:</label><br/>
-        <select name="status">
-            {% for i,j in status %}
-                <option value="{{ i }}">{{ j }}</option><br/>
-            {% endfor %}
-        </select>
-        <br/>
-        <label>Describe:</label><br/>
-        <textarea name="describe" required></textarea><br/>
-        <br/>
-        <label>Detailed Description:</label><br/>
-        <textarea name="description"></textarea><br/>
-        <label>Date of completion:</label><br/>
-        <input type="text" name="date_of_complection"/><br/>
-        <br/>
-        <input type="submit" value="Send"/>
-
+    <form action="lists/add/" method="post">
+        {% include "form.html" with button_text="create" %}
+    </form>
 {% endblock content %}
